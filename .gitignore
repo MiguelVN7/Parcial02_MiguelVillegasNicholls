@@ -1,0 +1,26 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# VS Code
+.vscode/
+
+# Node / Java / Python (general placeholders if later used)
+node_modules/
+*.log
+target/
+.build/
+__pycache__/
+*.pyc
+
+# Dependency / env folders
+venv/
+.env*
+
+# Archives
+*.zip
+*.tar.gz
+
+# Others
+.idea/
