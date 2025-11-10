@@ -1,26 +1,27 @@
 # Parcial 2 - Arquitectura de Software
 
-Repositorio para el Parcial 2 de la materia Arquitectura de Software.
+Repositorio para la parte práctica del Parcial 2 de la materia Arquitectura de Software, por Miguel Villegas.
 
-## Contenido
+## Configuración del entorno
 
-Por ahora el repositorio está vacío. Añade aquí documentación de:
+### Entorno virtual de Python
 
-- Requerimientos
-- Diseño de arquitectura
-- Decisiones técnicas
-- Código fuente
+Este proyecto usa Python 3.13.5 con un entorno virtual.
 
-## Pasos iniciales
+**Activar el entorno virtual:**
 
-1. Repositorio inicializado con rama `main`.
-2. Archivo `.gitignore` agregado.
+```zsh
+source venv/bin/activate
+```
 
-## Próximos pasos sugeridos
+**Instalar dependencias:**
 
-- Crear estructura de carpetas (`src/`, `docs/`, `tests/`).
-- Añadir una licencia si aplica.
-- Configurar CI (GitHub Actions) cuando haya código.
+```zsh
+pip install -r requirements.txt
+```
 
----
-Generado automáticamente el 10/11/2025.
+**Desactivar el entorno:**
+
+```zsh
+deactivate
+```

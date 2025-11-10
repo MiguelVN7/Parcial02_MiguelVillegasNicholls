@@ -1,0 +1,6 @@
+# Dependencias del proyecto
+# Instalar con: pip install -r requirements.txt
+
+# Ejemplo:
+# requests==2.31.0
+# numpy==1.26.0
