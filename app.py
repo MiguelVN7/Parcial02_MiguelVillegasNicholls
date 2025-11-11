@@ -1,35 +1,28 @@
 """
-Microservicio Flask para cálculo de factorial y paridad.
-
-Este microservicio recibe un número por URL y devuelve:
-- El número recibido
-- Su factorial
-- Una etiqueta indicando si es "par" o "impar"
+Microservicio Flask para cálculo de factorial y decir si es par o impar.
 """
 
 from flask import Flask, jsonify
 
 app = Flask(__name__)
+app.json.sort_keys = False
 
 
 @app.route('/factorial/<int:numero>', methods=['GET'])
-def calcular_factorial(numero):
-    """
-    Endpoint que recibe un número y devuelve información sobre él.
-    
-    Parámetros:
-    - numero (int): Número entero recibido por URL
-    
-    Retorna:
-    - JSON con: numero, factorial, paridad
-    """
-    # TODO: Implementar la lógica del cálculo del factorial
-    # TODO: Implementar la lógica para determinar si es par o impar
+def calcular_factorial(numero):  
+    factorial = 1
+    for i in range(2, numero + 1):
+        factorial = i * factorial
+
+    if numero % 2 == 0:
+        paridad = "par"
+    else:
+        paridad = "impar"
     
     resultado = {
         "numero": numero,
-        "factorial": None,  # Implementar cálculo
-        "paridad": None     # Implementar validación par/impar
+        "factorial": factorial, 
+        "paridad": paridad 
     }
     
     return jsonify(resultado)
@@ -37,13 +30,12 @@ def calcular_factorial(numero):
 
 @app.route('/', methods=['GET'])
 def home():
-    """Endpoint de bienvenida con instrucciones de uso."""
     return jsonify({
-        "mensaje": "Microservicio de Factorial y Paridad",
-        "uso": "/factorial/<numero>",
+        "mensaje": "Microservicio para Parcial 2 de AS con calculo de Factorial y Paridad",
+        "uso": "/factorial/numero",
         "ejemplo": "/factorial/5"
     })
 
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    app.run(debug=True, host='0.0.0.0', port=5001)
