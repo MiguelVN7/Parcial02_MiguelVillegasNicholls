@@ -6,21 +6,45 @@
 # VS Code
 .vscode/
 
-# Node / Java / Python (general placeholders if later used)
-node_modules/
-*.log
-target/
-.build/
+# Python
 __pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
 *.pyc
 
-# Dependency / env folders
+# Flask
+instance/
+.webassets-cache
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Entornos virtuales
 venv/
-.env*
+env/
+ENV/
+.venv
+
+# Variables de entorno
+.env
+.env.local
+.flaskenv
+
+# Logs
+*.log
+logs/
 
 # Archives
 *.zip
 *.tar.gz
 
-# Others
+# IDEs
 .idea/
+*.swp
+*.swo
+*~
